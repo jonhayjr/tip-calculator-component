@@ -1,0 +1,51 @@
+/* ================================= 
+  Import Fonts
+==================================== */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ================================= 
+  Base Element Styles
+==================================== */
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    background-color: hsl(185, 41%, 84%);
+}
+/* ================================= 
+    Base Layout Styles
+  ==================================== */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+/*Header*/
+.header {
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    font-size: 14px;
+}
+
+/*Main*/
+.main {
+    
+}
+
+/*Footer*/
+.footer { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.footer__link { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ================================= 
+    Media Queries
+  ==================================== */
