@@ -18,11 +18,14 @@
   <main class="main">
     <div class="bill-amount">
       <label for="bill" class="bill-amount__label">Bill</label>
-      <input type="text" name="bill" id="bill">
+      <div class="bill-input-group">
+        <img src="/images/icon-dollar.svg" alt="dollar symbol">
+        <input type="text" name="bill" id="bill" placeholder="0.00">
+      </div>
     </div>
-    <div class="tip-amount">
-      <h2 class="tip__heading">Select Tip %</h2>
+    <div class="tip-percent">
       <div class="wrapper">
+        <h2 class="tip__heading">Select Tip %</h2>
         <button>5%</button>
         <button>10%</button>
         <button>15%</button>
@@ -30,20 +33,27 @@
         <button>50%</button>
         <input type="text" placeholder="Custom" id="custom">
       </div>
-   
+    </div>
+    <div class="num-of-people">
+      <label for="person-count" class="num-of-people__label">Number of People</label>
+      <div class="num-of-people-input-group">
+        <img src="/images/icon-person.svg" alt="person icon">
+        <input type="text" name="person-count" id="person-count" placeholder=5>
+      </div>
+    </div>
+    <div class="tip-calculation">
+      <div class="tip-amount-section">
+        <p class="tip-amount-section__label">Tip Amount<br><span class="person-span">/ person</span></p>
+        <p class="tip-amount-section__value">$0.00</p>
+      </div>
+
+      <div class="person-total-section">
+        <p class="person-amount__label">Total<br><span class="person-span">/ person</span></p>
+        <p class="person-total-section__value">$0.00</p>
+      </div>
+      <button type="submit" class="btn btn-reset">RESET</button>
     </div>
   </main>
-
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
   <footer class="footer">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="footer__link">Frontend Mentor</a>. 

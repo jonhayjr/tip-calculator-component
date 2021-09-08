@@ -11,6 +11,13 @@ body {
     font-size: 16px;
     background-color: hsl(185, 41%, 84%);
 }
+
+::placeholder {
+    color: hsl(183, 100%, 15%);
+    opacity: 1;
+    text-align: right;
+    font-weight: 700;
+}
 /* ================================= 
     Base Layout Styles
   ==================================== */
@@ -20,16 +27,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
     max-width: 400px;
-}
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 100px 100px;
-    grid-gap: 10px;
-    justify-content: center;
 }
 
 /*Header*/
@@ -42,8 +42,9 @@ body {
 /*Main*/
 .main {
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px 10px 0 0;
+    border-radius: 30px 30px 0 0;
     width: 100%;
+    padding: 20px;
 }
 
 /*Bill Amount Section*/
@@ -54,21 +55,104 @@ body {
     margin: 0 auto;
 }
 
-.bill-amount__label {
+.bill-amount__label,
+.bill-input-group,
+.num-of-people-input-group {
     text-align: left;
 }
 
+.bill-input-group img,
+.num-of-people-input-group img {
+    position: absolute;
+    margin-left: 1px; 
+    margin-top: 1px;
+}
+
 /*Select Tip Section*/
-.tip-amount {
+.wrapper {
+    display: grid;
+    grid-auto-columns: minmax(100px, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.tip-percent {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 30px auto;
+    width: 100%;
+}
+
+.tip__heading {
+    font-size: 14px;
+    text-align: left;
+    grid-column: 1/3;
+    margin-bottom: 0;
+}
+
+/*Number of people Section*/
+.num-of-people {
     display: flex;
     flex-direction: column;
     width: 75%;
     margin: 0 auto;
 }
 
-.tip__heading {
-    font-size: 14px;
+.num-of-people__label {
     text-align: left;
+}
+
+/*Tip Calculation Section*/
+.tip-calculation {
+    background-color: hsl(183, 100%, 15%);
+    margin: 30px auto 0 auto;
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.tip-amount-section,
+.person-total-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tip-amount-section__label,
+.person-amount__label {
+   font-size: 14px;
+   color: white;
+   width: 200px;
+   text-align: left;
+}
+
+.person-span {
+    color: gray;
+    font-size: 12px;
+    text-align: left;
+}
+
+.tip-amount-section__value,
+.person-total-section__value {
+    color: hsl(172, 67%, 45%);
+    font-size: 20px;
+    text-align: right;
+}
+
+.btn-reset {
+    width: 85%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 5px;
+    outline: none;
+    border-radius: 5px;
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    height: 35px;
 }
 
 /*Footer*/
