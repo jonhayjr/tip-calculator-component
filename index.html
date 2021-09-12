@@ -31,11 +31,11 @@
         <button class="tip-button" data-tip=0.15>15%</button>
         <button class="tip-button" data-tip=0.25>25%</button>
         <button class="tip-button" data-tip=0.5>50%</button>
-        <input type="text" placeholder="Custom" id="custom">
+        <input type="number" placeholder="Custom" id="custom">
       </div>
     </div>
     <div class="num-of-people">
-      <label for="person-count" class="num-of-people__label">Number of People</label>
+      <label for="person-count" class="num-of-people__label">Number of People <span class="error-message">Can't be zero</span></label>
       <div class="num-of-people-input-group">
         <img src="/images/icon-person.svg" alt="person icon">
         <input type="text" name="person-count" id="person-count" placeholder=1>

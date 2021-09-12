@@ -68,6 +68,26 @@ body {
     margin-top: 1px;
 }
 
+#bill,
+#person-count,
+#custom {
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: hsl(183, 100%, 15%);
+    opacity: 1;
+    font-weight: 700;
+}
+
+.validation-error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
 /*Select Tip Section*/
 .wrapper {
     display: grid;
