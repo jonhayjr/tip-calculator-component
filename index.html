@@ -16,40 +16,44 @@
     <h1 class="header__heading">Spli<br>tter</h1>
   </header>
   <main class="main">
-    <div class="bill-amount">
-      <label for="bill" class="bill-amount__label">Bill</label>
-      <div class="bill-input-group">
-        <img src="/images/icon-dollar.svg" alt="dollar symbol">
-        <input type="text" name="bill" id="bill" placeholder="0.00">
+    <div class="input-section">
+      <div class="bill-amount">
+        <label for="bill" class="bill-amount__label">Bill</label>
+        <div class="bill-input-group">
+          <img src="/images/icon-dollar.svg" alt="dollar symbol">
+          <input type="text" name="bill" id="bill" placeholder="0.00">
+        </div>
       </div>
-    </div>
-    <div class="tip-percent">
-      <div class="wrapper">
-        <h2 class="tip__heading">Select Tip %</h2>
-        <button class="tip-button" data-tip=0.05>5%</button>
-        <button class="tip-button" data-tip=0.10>10%</button>
-        <button class="tip-button" data-tip=0.15>15%</button>
-        <button class="tip-button" data-tip=0.25>25%</button>
-        <button class="tip-button" data-tip=0.5>50%</button>
-        <input type="text" placeholder="Custom" id="custom">
+      <div class="tip-percent">
+        <div class="wrapper">
+          <h2 class="tip__heading">Select Tip %</h2>
+          <button class="tip-button" data-tip=0.05>5%</button>
+          <button class="tip-button" data-tip=0.10>10%</button>
+          <button class="tip-button" data-tip=0.15>15%</button>
+          <button class="tip-button" data-tip=0.25>25%</button>
+          <button class="tip-button" data-tip=0.5>50%</button>
+          <input type="text" placeholder="Custom" id="custom">
+        </div>
       </div>
-    </div>
-    <div class="num-of-people">
-      <label for="person-count" class="num-of-people__label">Number of People <span class="error-message">Can't be zero</span></label>
-      <div class="num-of-people-input-group">
-        <img src="/images/icon-person.svg" alt="person icon">
-        <input type="text" name="person-count" id="person-count" placeholder=1>
+      <div class="num-of-people">
+        <label for="person-count" class="num-of-people__label">Number of People <span class="error-message">Can't be zero</span></label>
+        <div class="num-of-people-input-group">
+          <img src="/images/icon-person.svg" alt="person icon">
+          <input type="text" name="person-count" id="person-count" placeholder=1>
+        </div>
       </div>
     </div>
     <div class="tip-calculation">
-      <div class="tip-amount-section">
-        <p class="tip-amount-section__label">Tip Amount<br><span class="person-span">/ person</span></p>
-        <p class="tip-amount-section__value">$0.00</p>
-      </div>
-
-      <div class="person-total-section">
-        <p class="person-amount__label">Total<br><span class="person-span">/ person</span></p>
-        <p class="person-total-section__value">$0.00</p>
+      <div class="tip-calculation__section">
+        <div class="tip-amount-section">
+          <p class="tip-amount-section__label">Tip Amount<br><span class="person-span">/ person</span></p>
+          <p class="tip-amount-section__value">$0.00</p>
+        </div>
+  
+        <div class="person-total-section">
+          <p class="person-amount__label">Total<br><span class="person-span">/ person</span></p>
+          <p class="person-total-section__value">$0.00</p>
+        </div>
       </div>
       <button type="submit" class="btn btn-reset">RESET</button>
     </div>
