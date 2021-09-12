@@ -18,6 +18,28 @@ body {
     text-align: right;
     font-weight: 700;
 }
+
+input {
+    border: 2px solid transparent;
+    background-color: hsl(189, 41%, 97%);
+    outline: none;
+}
+
+input:focus {
+    cursor: pointer;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+label,
+.tip__heading {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+button {
+    border: 1px solid transparent;
+}
 /* ================================= 
     Base Layout Styles
   ==================================== */
@@ -44,15 +66,7 @@ body {
     background-color: hsl(0, 0%, 100%);
     border-radius: 30px 30px 0 0;
     width: 100%;
-    padding: 20px;
-}
-
-/*Bill Amount Section*/
-.bill-amount {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .bill-amount__label,
@@ -64,8 +78,8 @@ body {
 .bill-input-group img,
 .num-of-people-input-group img {
     position: absolute;
-    margin-left: 1px; 
-    margin-top: 1px;
+    margin-left: 10px; 
+    margin-top: 15px;
 }
 
 #bill,
@@ -78,6 +92,13 @@ body {
     font-weight: 700;
 }
 
+#bill,
+#person-count {
+    width: 250px;
+    padding: 10px;
+    font-size: 24px;
+}
+
 .validation-error {
     border: 1px solid red;
 }
@@ -86,6 +107,14 @@ body {
     color: red;
     font-size: 12px;
     display: none;
+}
+
+/*Bill Amount Section*/
+.bill-amount {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 0 auto 15px auto;
 }
 
 /*Select Tip Section*/
@@ -106,10 +135,27 @@ body {
 }
 
 .tip__heading {
-    font-size: 14px;
     text-align: left;
     grid-column: 1/3;
     margin-bottom: 0;
+}
+
+.tip-button {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(183, 100%, 15%);
+    padding: 10px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.tip-button:hover {
+    cursor: pointer;
+    background-color:hsl(172, 67%, 45%);
+}
+
+#custom {
+    font-size: 25px;
+    padding: 10px;
 }
 
 /*Number of people Section*/
@@ -173,6 +219,11 @@ body {
     border: none;
     color: hsl(183, 100%, 15%);
     height: 35px;
+}
+
+.btn-reset:hover {
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
 }
 
 /*Footer*/
