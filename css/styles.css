@@ -170,7 +170,7 @@ button {
     margin: 0 auto;
 }
 
-.num-of-people__labels {
+.num-of-people_bill__labels {
     display: flex;
     justify-content: space-between;
     align-items: center;

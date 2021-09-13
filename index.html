@@ -18,7 +18,10 @@
   <main class="main">
     <div class="input-section">
       <div class="bill-amount">
-        <label for="bill" class="bill-amount__label">Bill</label>
+        <div class="num-of-people_bill__labels">
+          <label for="bill" class="bill-amount__label">Bill</label>
+          <p class="error-message" id="bill-validation-error">Value must be a number.</p>
+        </div>
         <div class="bill-input-group">
           <img src="images/icon-dollar.svg" alt="dollar symbol">
           <input type="text" name="bill" id="bill" placeholder="0.00">
@@ -36,9 +39,9 @@
         </div>
       </div>
       <div class="num-of-people">
-        <div class="num-of-people__labels">
+        <div class="num-of-people_bill__labels">
           <label for="person-count" class="num-of-people__label">Number of People</label>
-          <p class="error-message">Can't be zero</p>
+          <p class="error-message" id="person-count-validation-error">Can't be zero</p>
         </div>
         <div class="num-of-people-input-group">
           <img src="images/icon-person.svg" alt="person icon">

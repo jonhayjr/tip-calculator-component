@@ -7,16 +7,32 @@ $( document ).ready(() => {
     //On bill input change, update bill variable value  
     $('#bill').on('change', () => {
         //Store bill input value as integer
-       const billValue = parseInt($('#bill').val());
+       const billValue = parseFloat($('#bill').val());
 
-       //Checks if bill input is number
-       if (!isNaN(billValue)) {
-          //Sets bill variable to input value
+       if (isNaN(billValue)) {
+           //Add validation error class
+           $('#bill').addClass('validation-error');
+
+           //Show validation error
+           $('#bill-validation-error').css('display', 'inline-block');
+
+            return;
+       } else {
+            //Remove validation error class
+            $('#bill').removeClass('validation-error');
+
+            //Hide validation error
+            $('#bill-validation-error').css('display', 'none');
+
+           //Sets bill variable to input value
            bill = billValue;
 
-           //Adds two decimals to value in input field
-           $('#bill').val(billValue.toFixed(2));
+           //Adds decimal to input value if it doesn't have one
+           if (billValue % 1 === 0) {
+            $('#bill').val(billValue.toFixed(2));
+           }
        }
+       
     })
     //On tip button click, update tip variable value
     $('.tip-button').on('click', (e) => {
@@ -47,7 +63,7 @@ $( document ).ready(() => {
             $('#person-count').removeClass('validation-error');
 
             //Hide validation error
-            $('.error-message').css('display', 'none');
+            $('#person-count-validation-error').css('display', 'none');
 
             //Get tip amount based on bill and tipPercent
             const tipAmount = bill * tipPercent;
@@ -59,15 +75,16 @@ $( document ).ready(() => {
             //Check if tipAmount is greater than 0.
             if (tipAmount > 0) {
                 //personTipAmount is the tipAmount divided by the personCount
-                const personTipAmount = tipAmount / personCount;
+                const personTipAmount = parseFloat(tipAmount / personCount);
                 //personTotalAmount is the individual bill plus the individual tip
-                const personTotalAmount = personTipAmount + personBillAmount;
+                const personTotalAmount = parseFloat(personTipAmount + personBillAmount);
 
-                //Update tip amount per a person text
+                //Update tip amount per a person text.
                 $('.tip-amount-section__value').text(`$${personTipAmount.toFixed(2)}`);
-
-                //Updates total amount per a person text
+                
+                //Updates total amount per a person text.
                 $('.person-total-section__value').text(`$${personTotalAmount.toFixed(2)}`);
+    
             }
         } else {
             //If person count is less than 0️
@@ -76,7 +93,7 @@ $( document ).ready(() => {
             $('#person-count').addClass('validation-error');
 
             //Shows error-message span
-            $('.error-message').css('display', 'inline-block')
+            $('#person-count-validation-error').css('display', 'inline-block')
         }
     })
 
@@ -95,10 +112,12 @@ $( document ).ready(() => {
         $('#person-count').val('');
 
         //Remove validation error class
+        $('#bill').removeClass('validation-error');
         $('#person-count').removeClass('validation-error');
 
         //Hide validation error
-        $('.error-message').css('display', 'none');
+        $('#bill-validation-error').css('display', 'none');
+        $('#person-count-validation-error').css('display', 'none');
 
          //Set tip amount per a person value to 0
          $('.tip-amount-section__value').text('$0.00');
