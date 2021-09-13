@@ -33,7 +33,6 @@ input:focus {
 label,
 .tip__heading {
     font-size: 14px;
-    margin-bottom: 10px;
     font-weight: 400;
 }
 
@@ -99,7 +98,7 @@ button {
 
 #bill,
 #person-count {
-    width: 250px;
+    width: 275px;
     padding: 10px;
     font-size: 24px;
 }
@@ -169,6 +168,12 @@ button {
     flex-direction: column;
     width: 75%;
     margin: 0 auto;
+}
+
+.num-of-people__labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .num-of-people__label {
@@ -258,9 +263,13 @@ button {
      }
 
      /*Header*/
-
      .header {
          margin-bottom: 50px;
+     }
+
+     #bill,
+     #person-count {
+         width: 260px;
      }
 
      #bill,
